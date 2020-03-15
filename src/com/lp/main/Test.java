@@ -8,6 +8,8 @@ public class Test {
 		System.out.println("init by lp1");
 		System.out.println("1 by lp1");
 		System.out.println("2 by lp1");
+		System.out.println("3 by lp2");
+		System.out.println("4 by lp2");
 	}
 
 }
