@@ -11,6 +11,7 @@ public class Test {
 		System.out.println("3 by lp2");
 		System.out.println("4 by lp2");
 		System.out.println("5 by lp2");
+		System.out.println("5 by lp");
 	}
 
 }
