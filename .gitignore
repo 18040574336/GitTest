@@ -1,1 +1,20 @@
-/bin/
+.gradle
+.settings
+.svn
+.classpath
+.project
+.idea
+.metadata
+.recommenders
+*.iml
+*.class
+/*/bin
+/*/build
+/*/out
+
+.DS_Store
+
+/node_modules
+ package*.json
+ CHANGELOG*.md
+/fw-ui-client
