@@ -18,3 +18,4 @@
  package*.json
  CHANGELOG*.md
 /fw-ui-client
+/bin/
