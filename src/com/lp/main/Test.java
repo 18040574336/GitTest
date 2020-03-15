@@ -7,6 +7,7 @@ public class Test {
 
 		System.out.println("init by lp1");
 		System.out.println("1 by lp1");
+		System.out.println("2 by lp1");
 	}
 
 }
