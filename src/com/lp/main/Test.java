@@ -6,6 +6,7 @@ public class Test {
 		// TODO Auto-generated method stub
 
 		System.out.println("init by lp1");
+		System.out.println("1 by lp1");
 	}
 
 }
