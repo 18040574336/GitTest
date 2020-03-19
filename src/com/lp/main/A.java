@@ -16,6 +16,7 @@ public class A {
        System.out.println(8);
        System.out.println(8);
        System.out.println(8);
+       System.out.println(9);
 	}
 
 }
