@@ -1,14 +1,11 @@
 package com.lp.main;
 
-public class Student {
+public class Student2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		
-		int a =123456;
-		int b =123456;
-		System.out.println(a==b);
+      System.out.println("1");
+      System.out.println("2");
 	}
 
 }
