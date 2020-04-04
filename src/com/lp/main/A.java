@@ -10,6 +10,7 @@ public class A {
        System.out.println(9);
        System.out.println(9);
        System.out.println(19);
+        System.out.println(20);
 	}
 
 }
