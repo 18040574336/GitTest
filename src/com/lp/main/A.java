@@ -17,6 +17,7 @@ public class A {
         System.out.println(3333);
 	 System.out.println(6666);	
 	 System.out.println(7777);	
+	 System.out.println(888);	
 	}
 
 }
