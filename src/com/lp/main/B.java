@@ -9,6 +9,7 @@ public class B {
 		System.out.println(22);
 		System.out.println(33);
 		System.out.println(55);
+		System.out.println(66);
 	}
 
 }
