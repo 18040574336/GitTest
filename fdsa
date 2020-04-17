@@ -1,0 +1,629 @@
+[33mcommit 21ea70cda9184a517c2a9ea6a3802896cca56eda[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sat Mar 21 10:43:17 2020 +0800
+
+    æµ123456
+
+[33mcommit bbce76f1176bd5b6667c9a95a5eb043fbf6ffeec[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 3dc3dfc 75cecdf
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 15:36:36 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit 3dc3dfcf5819d16859f2026644c425b3602fe5a3[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 15:36:10 2020 +0800
+
+    223
+
+[33mcommit 75cecdfd79f15dc7911ce51a3a60b246e0434c76[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 15:35:20 2020 +0800
+
+    ac
+
+[33mcommit c78a8ad24ec7c550a1fe816670cd52a15e5392a5[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 14:48:45 2020 +0800
+
+    12323
+
+[33mcommit 309ba5c4b8c78b01447136c9fd52ad7ce871b7f2[m
+Merge: da1da33 bfd25c0
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 14:47:16 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+    
+    Conflicts:
+            src/com/lp/main/A.java
+
+[33mcommit da1da336e506859e36c8d3635a99987271c9227a[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 14:46:36 2020 +0800
+
+    23
+
+[33mcommit bfd25c0fb9f6246ac466f86b9c5cbf2ac3fd59f7[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 14:46:16 2020 +0800
+
+    2323
+
+[33mcommit 2f36ef9043de5187188e48d4537c6fce70eb5a12[m
+Merge: 5137fd1 387ee96
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 14:43:33 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit 5137fd111acb2c4ea27fdc2025fbd279e416eb3d[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 14:42:56 2020 +0800
+
+    2323
+
+[33mcommit 387ee9652d864915067584e61aa82eecc57d15d0[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 14:42:47 2020 +0800
+
+    223
+
+[33mcommit b26e094b44655ef56840fef1917079985c997600[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 14:35:41 2020 +0800
+
+    434
+
+[33mcommit ccdd0f24e3e97193ce53fb30ac09cbed224a423d[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 14:33:16 2020 +0800
+
+    6
+
+[33mcommit 10f7ca1cb9f34da76fa08c182f4bff17d2a62b21[m
+Merge: d16d2e3 ac96370
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 14:22:52 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit d16d2e358dbed54686881a88855f5082721fb221[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:49:57 2020 +0800
+
+    123
+
+[33mcommit ac9637093ed9afd5991117624760f7e848c99926[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:45:07 2020 +0800
+
+    aaa
+
+[33mcommit 66d95cacdecc365631258660934f11a0fa4a1f37[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:44:39 2020 +0800
+
+    123123
+
+[33mcommit 706755869c453a804c1c4d5d85a2f44ec6fcb594[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:36:55 2020 +0800
+
+    a4
+
+[33mcommit 0273c2886b13b076e9d02e2625ec02f304f8fc8d[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:36:47 2020 +0800
+
+    a 4
+
+[33mcommit f8adf902573d9973b455b624d348631f5235b0f6[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:32:44 2020 +0800
+
+    5
+
+[33mcommit a50f4474476a50e9dd626e412f99411e0dc974b6[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:32:07 2020 +0800
+
+    c4
+
+[33mcommit a2fa0fce6b4730b5b523e2b7dd9ddf46d00f0589[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:30:16 2020 +0800
+
+    d 4
+
+[33mcommit 3b4fac799961ed1204cdad999e69aba083720fbe[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:29:06 2020 +0800
+
+    c 3
+
+[33mcommit faa109aac154f1843f8e71e4dd7272fc8903eda0[m
+Merge: 4179a53 88703d3
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:24:34 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit 4179a53dd6b88137a046aa12c1865cf30d360124[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:23:59 2020 +0800
+
+    c2
+
+[33mcommit 88703d3ad2b0553312a4be44a14f832aa2b9a6c8[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:23:35 2020 +0800
+
+    b 33
+
+[33mcommit 54fe21da510369c745fb7e1e3b8812c1bae573d0[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:19:54 2020 +0800
+
+    c1
+
+[33mcommit a4950cf2bae3b8ca4699ecef5744727baf6552d0[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:19:32 2020 +0800
+
+    b 22
+
+[33mcommit ecc0ad0924259bf91b2b222ccb2bc0def8c48247[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:14:48 2020 +0800
+
+    a 2
+
+[33mcommit 3e7c65fbfcd18850d31d85a2e8d402922d9bce9a[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 13:15:12 2020 +0800
+
+    aa
+
+[33mcommit 5812eaeed18b5279ae6d47c22afae1ba83649ea0[m
+Merge: 33aa246 f63a554
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:54:55 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit f63a554876eb69b46368909426a5d8224ee69b88[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:44:50 2020 +0800
+
+    2222
+
+[33mcommit 33aa2466e8d6955ca511f037c402fea1e35f2b41[m
+Merge: 78d92e6 731ea65
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:40:34 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit 78d92e6d0ba311022571ce77881b302fc79ef9d6[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:38:25 2020 +0800
+
+    r
+
+[33mcommit 731ea65586eda606fb1a656614c12a6dd4facb6e[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:37:48 2020 +0800
+
+    er
+
+[33mcommit 05c78d513175a17c5046fe6b84abb3527a4e3eed[m
+Merge: 3f3e79b 15f63b0
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:30:22 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit 3f3e79b2e56cced9f94f07b40d7956f56822ba6a[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:29:47 2020 +0800
+
+    eq2
+
+[33mcommit 15f63b0b187db22af0ddd1f1b8424eb25b1ea1cf[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:28:56 2020 +0800
+
+    123
+
+[33mcommit cefc28c3bf467b7fa339e26767a1e3c26ba39cb5[m
+Merge: 173fd49 09f095a
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:25:53 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit 173fd497a23b049a6d1dde35829c6c2c1deb4267[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:25:30 2020 +0800
+
+    ADD G
+
+[33mcommit 09f095a218fe2fcb54eb2176221c11a7f43540e3[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:24:32 2020 +0800
+
+    ADD F
+
+[33mcommit 903327ac8cdc95854bb40b1395bc0c4dab2d5efe[m
+Merge: 0e1e72b 1d05ca3
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:21:09 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit 0e1e72be9551c8c034e91bccc8377c863341e337[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:20:04 2020 +0800
+
+    ADD E
+
+[33mcommit 1d05ca3ed552085e721e2faed408406c452b9d32[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:19:27 2020 +0800
+
+    ADD D
+
+[33mcommit b6372c3cf9f802ed22dc3dfacc5dd32684893fa2[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:16:56 2020 +0800
+
+    ADD B
+
+[33mcommit acf43776d477784bc8e435b879490507aad54a37[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:15:34 2020 +0800
+
+    C
+
+[33mcommit f96b5a6bc8f07ca2139cea5480bd8302ed1b3821[m
+Merge: dddba1c 1e0a6b1
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:08:02 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit dddba1cb08906eda4bf85ceb02b0c98b3301e7eb[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:06:59 2020 +0800
+
+    add A
+
+[33mcommit 1e0a6b14da0ec080a1a7b08adb3b4be4e41d3319[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Thu Mar 19 11:06:21 2020 +0800
+
+    System.out.println(a==b);
+
+[33mcommit 91a96dd7878b9205ed90b59ddf8b90982f76fcb1[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 12:30:38 2020 +0800
+
+    4
+    
+    Conflicts:
+            src/com/lp/main/Student2.java
+
+[33mcommit 2e7667d00d20d563d184ace41b1028f0c315df4c[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 12:31:54 2020 +0800
+
+    ddddd
+
+[33mcommit a46e7cc48ec2314ed8ec33d22f1461839bf9eaff[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 12:30:38 2020 +0800
+
+    4
+
+[33mcommit 18d37546de5479ef660c694b315ab0615a811133[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 12:28:42 2020 +0800
+
+    6
+
+[33mcommit c4db5ef74dffbe3844f23e097a1fda941801058a[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 12:13:57 2020 +0800
+
+    del stu2
+
+[33mcommit 8be528ae5d2ad9c2c3aaadf573f428678d822d0e[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 12:13:41 2020 +0800
+
+    2
+
+[33mcommit d3f39fde23b04a0db5bfeed1390ab2fb2dd5b384[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 12:13:27 2020 +0800
+
+    1
+
+[33mcommit 3ab2752490de2d2ba57d86c95065a450f6a1af0e[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 11:27:57 2020 +0800
+
+    add
+
+[33mcommit 03b94e2f8a7b907f323e3509e73abaf3a8b130dc[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 11:25:48 2020 +0800
+
+    del
+
+[33mcommit 6d3e0c53ae61b1409cab35b6bbde8ce881dcf0c6[m
+Merge: e536297 a5eaba2
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 11:24:22 2020 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit e536297bb509e6457e5cf181825f45fca0086c4b[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 11:22:16 2020 +0800
+
+    11
+
+[33mcommit a5eaba29baaa5b90970c2945baa4d9e92cb37942[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 11:19:34 2020 +0800
+
+    Student
+
+[33mcommit a8dd07dddaa8e90e684dcd7ac92992a3d0ce9db7[m
+Merge: cdab493 b815868
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 11:10:43 2020 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit cdab49325bc7e019026be36313b12c84e7d914d9[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 10:42:18 2020 +0800
+
+    11
+
+[33mcommit feb35337f3c582d1fbeb8473d8aad59953de9974[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 10:39:57 2020 +0800
+
+    i am student lp2
+
+[33mcommit b815868960ea07cde12e4d29a30a8138ea477cd2[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 10:34:02 2020 +0800
+
+    delete student
+
+[33mcommit ffdbf035b34641ee2e71f2aeb54f90618bfaac2a[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 10:30:48 2020 +0800
+
+    i am student lp
+
+[33mcommit e43358527bd8400fbbfac6b8dba407a6e556ee07[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 10:17:58 2020 +0800
+
+    i am student
+
+[33mcommit d63a025c9389a858c02af057ce0062519cabf18b[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 09:57:27 2020 +0800
+
+    15 by  lp
+
+[33mcommit 4883211139365945a035a9715a64607e30747fd1[m
+Merge: bfdbd12 e7fc59b
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 09:51:22 2020 +0800
+
+    Merge branch 'GitTestBranch'
+    
+    Conflicts:
+            src/com/lp/main/Test.java
+
+[33mcommit e7fc59be3a15aca0987f792282104cd7808a5250[m[33m ([m[1;31morigin/GitTestBranch[m[33m)[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 09:50:21 2020 +0800
+
+    11 by branch lp
+
+[33mcommit bfdbd121c6e7a9999b0e1df58e3c538465b9321f[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Mon Mar 16 09:27:19 2020 +0800
+
+    14 by lp
+
+[33mcommit 86cd1ae97e01749668061a02d1759bf4127cbc1f[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 19:54:44 2020 +0800
+
+    Revert "delete 13 by lp"
+    
+    This reverts commit eab1c1dd38413882cdcafb22c037266e81093aad.
+
+[33mcommit eab1c1dd38413882cdcafb22c037266e81093aad[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 19:50:49 2020 +0800
+
+    delete 13 by lp
+
+[33mcommit be42d490f4fde50c1826db194ad52cd51db1a2da[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 18:57:55 2020 +0800
+
+    13 by lp
+
+[33mcommit dc416fedab9a6a0406515a67a9627ee7a9a2ae09[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 18:57:43 2020 +0800
+
+    12 by lp
+
+[33mcommit a9f8f44ce31e60cd0eafe5a7069c0f33bc11914b[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 18:57:30 2020 +0800
+
+    11 by lp
+
+[33mcommit 401bbb6f33e4ca16e477ed21f1868c0c72cb0f51[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 17:36:32 2020 +0800
+
+    confilt
+
+[33mcommit 7cb193f885fba81bc427c6d23a3669ae899ad5de[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 17:07:08 2020 +0800
+
+    10 by branch lp
+
+[33mcommit f96921295e8d087fe00812b931413182142574be[m
+Merge: 8beecee 49d7e89
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 17:04:17 2020 +0800
+
+    Merge branch 'GitTestBranch'
+
+[33mcommit 49d7e8919a0910c7b411f20bd4f357e1f195c79e[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 17:02:40 2020 +0800
+
+    9 by branch lp
+
+[33mcommit 8beecee04bf7717cf3cf5e0cf99adfad8d94bfcb[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 17:02:08 2020 +0800
+
+    9 by lp
+
+[33mcommit fa121221a29d07de66072c2995d91b75b3f17934[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 16:58:52 2020 +0800
+
+    8 by branch lp
+
+[33mcommit e336bb8ce4d0970d7cb2b6c199b33173c67c59aa[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 16:31:34 2020 +0800
+
+    7 by lp
+
+[33mcommit 0552581a83b07ce21505f04bb445b5af7720d4e7[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 16:30:24 2020 +0800
+
+    6 by lp
+
+[33mcommit a042d6e109839905d231c7f4e937b3050cf91a0a[m
+Merge: 898080b b6367be
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 16:27:22 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+    
+    Conflicts:
+            src/com/lp/main/Test.java
+
+[33mcommit 898080baf62f91a0c86d79c261b6b953aae92a4a[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 16:25:06 2020 +0800
+
+    5 by lp2
+
+[33mcommit b6367bec764bf79989cab11e720c530d302075fb[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 16:20:33 2020 +0800
+
+    5 by lp
+
+[33mcommit 5f19072856fcfced1b3793e4c53636ca99c57dcd[m
+Merge: 4df1351 fb2dbdf
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 16:08:15 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit fb2dbdf7758ff62b3668fa951e61a9edb57103c2[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 16:05:23 2020 +0800
+
+    4 by lp2
+
+[33mcommit 2b7d1457668a58ed9dbed2b31f8fb987c5eda393[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 16:05:10 2020 +0800
+
+    3 by lp2
+
+[33mcommit 4df135102156fa20ca5ac05ce9256e68cd5c4d03[m
+Merge: 5969466 31ee5d4
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 15:56:40 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+
+[33mcommit 59694663d5983e6100e601f5b9c0971cef94ba04[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 15:53:01 2020 +0800
+
+    confilt
+
+[33mcommit 31ee5d49e0577d32e2b06254d9b06ad4273bee15[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 15:48:21 2020 +0800
+
+    2
+
+[33mcommit a1ae86549c3754b2211c844bcd00ba1984108517[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 15:45:43 2020 +0800
+
+    1
+
+[33mcommit 2186eb8e0464d21a6357256eb89ca55ae3ce5715[m
+Merge: d331b5b ef6ce39
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 12:01:17 2020 +0800
+
+    Merge branch 'master' of https://github.com/18040574336/GitTest.git
+    
+    Conflicts:
+            .gitignore
+
+[33mcommit d331b5b34dca3b94ac2e87f41821f0098b6aa80e[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 11:56:15 2020 +0800
+
+    local gitignore
+
+[33mcommit ef6ce39e5d8c8990a531e880e8d82768f955d473[m
+Author: 18040574336 <48577317+18040574336@users.noreply.github.com>
+Date:   Sun Mar 15 11:52:20 2020 +0800
+
+    Update .gitignore
+
+[33mcommit df67ff018d457d0070c0129886e979296446c2c5[m
+Author: 梁鹏 <liangp@gantsoftware.com>
+Date:   Sun Mar 15 11:46:26 2020 +0800
+
+    init by lp
+
+[33mcommit b76d88e084fe09aaadd5ed6c796a1f23b89c7217[m
+Author: 18040574336 <48577317+18040574336@users.noreply.github.com>
+Date:   Sun Mar 15 11:39:21 2020 +0800
+
+    Initial commit
