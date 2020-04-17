@@ -7,7 +7,7 @@ public class Test {
 
 		System.out.println("init by lp1");
 		System.out.println("1 by lp1");
-		System.out.println("2 by lp1");
+		System.out.println("2 by l2p1");
 		System.out.println("3 by lp2");
 		System.out.println("4 by lp2");
 		System.out.println("5 by lp2");
@@ -18,7 +18,7 @@ public class Test {
 		System.out.println("9 by lp");
 		System.out.println("9 by branch lp");
 		System.out.println("10 by branch lp");
-		System.out.println("11 by lp");
+		System.out.println("11 by lp2");
 		System.out.println("12 by lp");
 		System.out.println("13 by lp");
 		System.out.println("14 by lp");
