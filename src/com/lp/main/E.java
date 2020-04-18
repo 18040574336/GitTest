@@ -4,7 +4,8 @@ public class E {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-      System.out.println(2222222);
+
+		System.out.println("aaa"+(4+3)+"bbb");
 	}
 
 }
