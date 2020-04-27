@@ -8,6 +8,7 @@ public class Student {
 		
 		int a =123456;
 		int b =123456;
+                int c =123456;
 		System.out.println(a==b);
 	}
 
