@@ -16,6 +16,7 @@ public class Student {
 		int e112 =123456;
 		int e113 =123456;
 		int e115 =123456;
+		int localhost =123456;
 		int service =123456;
 		System.out.println(a==b);
 	}
