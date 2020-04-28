@@ -10,6 +10,7 @@ public class Student {
 		int b =123456;
                 int c =123456;
  int d =123456;
+		 int e =123456;
 		System.out.println(a==b);
 	}
 
