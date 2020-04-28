@@ -11,6 +11,7 @@ public class Student {
                 int c =123456;
  int d =123456;
 		 int e =123456;
+		int e1 =123456;
 		System.out.println(a==b);
 	}
 
