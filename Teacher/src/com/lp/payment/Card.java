@@ -4,7 +4,7 @@ public   abstract   class Card implements Pay {
 
     @Override
     public void pay(int count){
-        System.out.println("支付："+count);
+        System.out.println("鏀粯锛�"+count);
     }
 
     public abstract void   doPay();
