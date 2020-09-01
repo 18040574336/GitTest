@@ -1,0 +1,333 @@
+package com.jiangda.custom.tc.service.impl;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jiangda.custom.change.temp.dao.ChangeLocalDao;
+import com.jiangda.custom.change.temp.model.ChangeExtLocal;
+import com.jiangda.custom.change.temp.model.ChangeLocal;
+import com.jiangda.custom.change.temp.model.EngineerChangeOrderLocal;
+import com.jiangda.custom.change.temp.service.ChangeLocalService;
+import com.jiangda.custom.tc.dao.NewCarDataDao;
+import com.jiangda.custom.tc.model.NewCarData;
+import com.jiangda.custom.tc.service.TcLogService;
+import com.jiangda.framework.core.exception.WarnException;
+import com.jiangda.framework.core.rectype.RecordTypeUtil;
+import com.jiangda.importData.DataImportService;
+import com.jiangda.importData.impl.BaseDataImportServiceImpl;
+import com.jiangda.prd.bommgmt.bom.model.PartAssembly;
+import com.jiangda.prd.chgmgmt.change.dao.ChangeActionDao;
+import com.jiangda.prd.chgmgmt.change.model.ChangeAction;
+import com.jiangda.prd.chgmgmt.change.model.ManufactureChangeOrder;
+import com.jiangda.prd.mstdata.extension.model.ProductNodeExt;
+import com.jiangda.prd.mstdata.form.service.CodeAssigneeService;
+import com.jiangda.prd.mstdata.material.dao.PartDao;
+import com.jiangda.prd.mstdata.material.model.Part;
+import com.jiangda.prd.mstdata.material.service.PartService;
+import com.jiangda.prd.mstdata.product.dao.ProductNodeDao;
+import com.jiangda.prd.mstdata.product.model.ProductNode;
+import com.jiangda.prj.mstdata.constant.CodeListConstant;
+
+@Service("newCarDataImportService")
+public class NewCarDataImportService extends BaseDataImportServiceImpl implements DataImportService {
+	@Autowired
+	private PartDao partDao;
+
+	@Autowired
+	private NewCarDataDao newCarDataDao;
+
+	@Autowired
+	private ProductNodeDao productNodeDao;
+
+	@Autowired
+	private CodeAssigneeService codeAssigneeService;
+	@Autowired
+	private ChangeLocalDao changeLocalDao;
+
+	@Autowired
+	private ChangeLocalService changeLocalService;
+
+	@Autowired
+	private ChangeActionDao changeActionDao;
+	@Autowired
+	private TcLogService tcLogService;
+
+
+	@Autowired
+	private PartService partService;
+
+
+	private static final String[] temp = {};
+	private static final String[] sheetNames = { "" };
+	private static final Map<String, String> columnMap = new HashMap<String, String>() {
+		private static final long serialVersionUID = 1L;
+		{
+			put("A", "xh");
+			put("B", "fdh");
+			put("C", "fmc");
+			put("D", "zdh");
+			put("E", "zmc");
+			put("F", "wzh");
+			put("G", "sl");
+		}
+	};
+
+	@Override
+	public Map<String, Object> doReceiveFile(Long fileId, String fileName, Map<String, Object> params) {
+		String[] expectedType = {};
+		Map<String, Object> changeDataMap = super.importController(fileId, temp, sheetNames, columnMap, expectedType);
+		//生成GX特殊订单
+		checkData(changeDataMap);
+		return null;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public boolean checkData(Map<String, Object> changeDataMap) {
+		String nodeCode = "";
+		Integer rownum = 2;
+		StringBuffer partNotExistStrBuffer = new StringBuffer();
+		StringBuffer partColumnNullStrBuffer = new StringBuffer();
+		StringBuffer partNumSpaceStrBuffer = new StringBuffer();
+		StringBuffer part1XBStrBuffer = new StringBuffer();
+		StringBuffer strMessage = new StringBuffer();
+		List<PartAssembly> partAssemblyList = new ArrayList<PartAssembly>();
+		List<Map<String, Object>> inputDataList = (List<Map<String, Object>>) changeDataMap.get("inputDataList");
+		if (inputDataList != null) {
+			for (Map<String, Object> temp : inputDataList) {
+				if (temp.isEmpty()) {
+					continue;
+				}
+				boolean isDataComplete = true;
+				PartAssembly partAssembly = new PartAssembly();
+				//父零件 空
+				if (temp.get("fdh") == null) {
+					partColumnNullStrBuffer.append("&nbsp;&nbsp;【第" + rownum + "行2列】,");
+					//判断空格
+				}else {
+				    Long partId=newCarDataDao.findPartByCode(temp.get("fdh").toString());
+					if (null!=partId) {
+						if ("".equals(nodeCode)) {
+							nodeCode = temp.get("fdh").toString();
+							ProductNode productNodeTemp = productNodeDao.createQuery().nodeCodeEquals(nodeCode)
+									.unique();
+							if (productNodeTemp != null) {
+								throw new WarnException("【" + nodeCode + "】" + "车型已经存在！");
+							}
+						}
+						partAssembly.setMasterPartId(tcLogService.getPartId(temp.get("fdh").toString()));
+					} else {
+						if (!partNotExistStrBuffer.toString().contains(temp.get("fdh").toString()))
+							partNotExistStrBuffer.append("" + temp.get("fdh")+"<Br/>" );
+
+					}
+				}
+
+				////子代号 空
+				if (temp.get("zdh") == null) {
+					partColumnNullStrBuffer.append("&nbsp;&nbsp;【第" + rownum + "行4列】");
+					//判断空格
+				} else if (temp.get("zdh").toString().contains(" ")) {
+					partNumSpaceStrBuffer.append("&nbsp;&nbsp;【第" + rownum + "行4列空格】");
+					//判断是否存在1XB
+				} else if (temp.get("zdh").toString().startsWith("1XB")) {
+					part1XBStrBuffer.append( temp.get("zdh") + "    "+temp.get("zmc"));
+				} else {
+				    Long partId=newCarDataDao.findPartByCode(temp.get("zdh").toString());
+					if (null!=partId) {
+						partAssembly.setSubPartId(tcLogService.getPartId(temp.get("zdh").toString()));
+					} else {
+						if (!partNotExistStrBuffer.toString().contains(temp.get("zdh").toString()))
+							partNotExistStrBuffer.append(temp.get("zdh")+""+temp.get("zmc")+"<Br/>");
+					}
+				}
+				//位置号是否空
+				if (null != temp.get("wzh")) {
+					partAssembly.setSequenceNum(temp.get("wzh").toString());
+				} else {
+					partColumnNullStrBuffer.append("&nbsp;&nbsp;【第" + rownum + "行6列】");
+				}
+				//数量不能为空
+				if (null != temp.get("sl")) {
+					partAssembly.setQuantity(Double.parseDouble(temp.get("sl").toString()));
+				} else {
+					partColumnNullStrBuffer.append("&nbsp;&nbsp;【第" + rownum + "行7列】");
+				}
+
+				partAssembly.setBomType("EBOM");
+				partAssembly.setActiveStatus(CodeListConstant.ACTIVE_STATUS_DRAFT);
+				partAssembly.setOperationType(CodeListConstant.OPERATION_TYPE_ADD);
+				partAssembly.setIsLatest(true);
+				partAssembly.setDataSource(CodeListConstant.DATA_SOURCE_TC);
+
+				if (isDataComplete) {
+					partAssemblyList.add(partAssembly);
+					this.writeResult(temp, isDataComplete, "");
+				}
+
+				rownum++;
+			}
+		}
+		if (partNotExistStrBuffer.length() > 0 || partColumnNullStrBuffer.length() > 0
+				|| part1XBStrBuffer.length() > 0 || partNumSpaceStrBuffer.length() > 0) {
+			//不存在零件
+			if (partNotExistStrBuffer.length() > 0) {
+				strMessage.append("&nbsp;&nbsp;不存在零件:<Br/>" + partNotExistStrBuffer.toString());
+			}
+			//为空零件
+			if (partColumnNullStrBuffer.length() > 0) {
+				strMessage.append("&nbsp;&nbsp;空数据:<Br/>" + partColumnNullStrBuffer.toString());
+			}
+			//子零件编号第一位为空
+			if (partNumSpaceStrBuffer.length() > 0) {
+				strMessage.append("&nbsp;&nbsp;零件号含有空如下:<Br/>" + partNumSpaceStrBuffer.toString());
+			}
+			if (part1XBStrBuffer.length() > 0) {
+				strMessage.append("&nbsp;&nbsp;存在1XB零件:<Br/>" + part1XBStrBuffer.toString());
+			}
+			throw new WarnException(strMessage.toString());
+		} else {
+			doInitGxSpecialCar(nodeCode, partAssemblyList);
+		}
+		return true;
+	}
+
+	/**
+	 * GX 特殊订单导入
+	 *
+	 */
+	public void doInitGxSpecialCar(String nodeCode, List<PartAssembly> partAssemblyList) {
+		//创建变更单
+		ChangeLocal change = createChange(nodeCode, CodeListConstant.MCO_CHANGE_SPECIAL_GX_ORDER_RELEASE,
+				CodeListConstant.G_X_SPECIAL);
+
+		Long changeId = change.getId();
+
+		String changeCode = change.getChangeCode();
+		//保存G车型
+		Map<String, Object> map = this.doSaveProductNode(nodeCode, changeId);
+
+		Long partId = (Long) map.get("partId");
+
+		Long productNodeId = (Long) map.get("productNodeId");
+
+		this.doSaveBom(partId, changeId, partAssemblyList);
+
+		//保存changeAction
+		newCarDataDao.saveGxSpecailChangeAction(changeId);
+
+		//this.saveChangeAction(changeId);
+
+		//change加上车型ID
+		this.doUpdateAddChangeProductNodeId(changeId, productNodeId);
+		//保存
+		this.saveNewCar(nodeCode, changeCode, changeId);
+
+	}
+
+	public ChangeLocal createChange(String nodeCode, String changeType, String carType) {
+		//获取产品
+		String changeCode = codeAssigneeService.doGnerateNextCode(RecordTypeUtil.getId(ManufactureChangeOrder.class));
+		ChangeExtLocal changeExt = new ChangeExtLocal();
+		EngineerChangeOrderLocal order = new EngineerChangeOrderLocal();
+		changeExt.setDataSources(CodeListConstant.PLM_SYSTEM);
+		changeExt.setVehicleType(carType);
+		changeExt.setManufactureBase(CodeListConstant.BFDA_FACTORY);
+		order.setChangeExtLocal(changeExt);
+		order.setChangeStatus(CodeListConstant.ACTIVE_STATUS_DRAFT);
+		order.setChangeContent(changeType);
+		order.setChangeCode(changeCode);
+		changeLocalDao.save(order);
+
+		return order;
+	}
+
+	//到产品型谱
+	public Map<String, Object> doSaveProductNode(String nodeCode, Long changeId) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		Long gpartId = null;
+		Long productNodeId = null;
+		List<ProductNode> productNodes = productNodeDao.createQuery().nodeCodeEquals(nodeCode).list();
+		ProductNode productNode = new ProductNode();
+		List<Part> parts = partDao.createQuery().materialNumEquals(nodeCode).list();
+		Part part=parts.get(0);
+		part.setPartStyle(2L);
+		partService.doUpdate(part);
+		String nodeName = parts.get(0).getMaterialName();
+		gpartId = parts.get(0).getId();
+		if (productNodes.isEmpty()) {
+			ProductNodeExt productNodeExt = new ProductNodeExt();
+			productNode.setNodeCode(nodeCode);
+			productNode.setNodeName(nodeName);
+			productNode.setPartId(gpartId);
+			productNodeExt.setIsGx("1");
+			productNode.setProductNodeExt(productNodeExt);
+			productNodeDao.save(productNode);
+			productNodeId = productNode.getId();
+		}
+		map.put("partId", gpartId);
+		map.put("productNodeId", productNodeId);
+		return map;
+
+	}
+
+	public void doSaveBom(Long bomProductId, Long changeId, List<PartAssembly> partAssemblyList) {
+		List<PartAssembly> partAssemblyLstData = new ArrayList<PartAssembly>();
+		for (PartAssembly p : partAssemblyList) {
+			/*List<PartAssembly> tempLst = newCarDataDao.findPartAssemblyList(p);
+			if (tempLst.size() == 0) {*/
+				p.setBomProductId(bomProductId);
+				p.setChangeId(changeId);
+			//	partAssemblyDao.save(p);
+				partAssemblyLstData.add(p);
+			//}
+		}
+		newCarDataDao.doSavePartAssemblyLstData(partAssemblyLstData);
+	}
+
+	public void saveChangeAction(Long changeId) {
+		List<PartAssembly> lstPartAssembly = newCarDataDao.findGxSpecailPartAssemblyByChangeId(changeId);
+		for (PartAssembly p : lstPartAssembly) {
+			ChangeAction changeAction = new ChangeAction();
+			changeAction.setBusinessType("partAssembly");
+			changeAction.setChangeType(CodeListConstant.MCO_CHANGE_SPECIAL_GX_ORDER_RELEASE);
+			changeAction.setRecTypeId(302L);
+			changeAction.setChangeId(changeId);
+			changeAction.setRecId(p.getId());
+			changeActionDao.save(changeAction);
+		}
+
+	}
+
+	public void doUpdateAddChangeProductNodeId(Long changeId, Long productNodeId) {
+		ChangeLocal changeLocal = changeLocalDao.findById(changeId);
+		ChangeExtLocal changeExtLocal = changeLocal.getChangeExtLocal();
+		changeExtLocal.setProductNodeId(productNodeId);
+		changeLocal.setChangeExtLocal(changeExtLocal);
+		changeLocalService.doUpdate(changeLocal);
+
+	}
+
+	public void saveNewCar(String nodeCode, String changeCode, Long changeId) {
+		NewCarData newCarData = new NewCarData();
+		newCarData.setMadePlace(CodeListConstant.BFDA_FACTORY);
+		newCarData.setTypeCode(nodeCode);
+		newCarData.setChangeContent(CodeListConstant.G_X_SPECIAL);
+		newCarData.setIsInit("2");
+		newCarData.setBgZt(CodeListConstant.ACTIVE_STATUS_DRAFT);
+		newCarData.setChangeCode(changeCode);
+		newCarData.setChangeId(changeId.toString());
+		newCarDataDao.save(newCarData);
+	}
+
+	@Override
+	public void doSave() {
+		// TODO Auto-generated method stub
+
+	}
+}
